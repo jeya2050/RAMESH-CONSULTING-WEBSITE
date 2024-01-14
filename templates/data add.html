@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh consulting</title>
+    <style>
+        .propertyTitle {
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            display: block;
+            text-transform: uppercase;
+            width: auto;
+            font-size: 20px;
+            margin: 19.5px;
+            
+        }
+
+        .titleWrap {
+            display: inline-block;
+        }
+
+        .propertyValue {
+            font-family: verdana;
+            color: rgb(0, 0, 0);
+            display: block;
+            width: auto;
+            font-size: 20px;
+            margin: 12px;
+        }
+
+        .valueWrap {
+            display: inline-block;
+            width: auto;
+        }
+
+        .head {
+            margin-top: 25px;
+            font-size: 30px;
+            color: rgba(238, 52, 52, 0.867);
+            font-weight: bold;
+        }
+    </style>
+
+<script></script>
+</head>
+<body style="background-color:rgb(243, 233, 175)">
+    <div class="head" style="text-align:center;"> RAMESH CONSULTING </div>
+    <div class="head" style="text-align:left; color:black; font-size: 24px"> CUSTOMER DETAILS : </div><br>
+    <div >
+        <form action="/save" method="post">
+            <div class="titleWrap">
+                <label class="propertyTitle" for="fname">PURCHASE DATE :</label>
+                <label class="propertyTitle" for="fname">CUSTOMER ID :</label>
+                <label class="propertyTitle" for="fname">NAME :</label>
+                <label class="propertyTitle" for="fname">PHONE NUMBER :</label>
+                <label class="propertyTitle" for="fname">ADDRESS :</label>
+                <label class="propertyTitle" for="fname">AADHAR NUMBER :</label>
+                <label class="propertyTitle" for="fname">VEHICLE NUMBER :</label>
+                <label class="propertyTitle" for="fname">VEHICLE MODEL :</label>
+                <label class="propertyTitle" for="fname">VEHICLE YEAR :</label>
+                <label class="propertyTitle" for="fname">RC BOOK :</label>
+                <label class="propertyTitle" for="fname">NOC DETAILS:</label>
+                <label class="propertyTitle" for="fname">INSURENCE DETAILS :</label>
+                <label class="propertyTitle" for="fname">ADDITIONAL DETAILS :</label>
+                <label class="propertyTitle" for="fname">PURCHASE AMOUNT :</label>
+                <label class="propertyTitle" for="fname">COMMISSION AMOUNT :</label>
+                <label class="propertyTitle" for="fname">SPARE SPENT AMOUNT :</label>
+                <label class="propertyTitle" for="fname">TOTAL PURCHASE AMOUNT :</label>
+                
+            </div>
+            <div class="valueWrap">
+                <input type="date" class="propertyValue" name="i1" >
+                <input type="text"class="propertyValue"name="cus_id_label"value="{{variable}}">
+                <input type="text" class="propertyValue" name="i2" autofocus >
+                <input type="text" class="propertyValue" name="i3"oninput="this.value=this.value.replace(/[^0-9,]/g,'');">
+                <input type="text" class="propertyValue" name="i4">
+                <input type="text" maxlength="14"class="propertyValue" name="i5"oninput="this.value=this.value.replace(/[^0-9\s]/g,'');">
+                <input type="text" class="propertyValue" name="i16">
+                <input type="text" class="propertyValue" name="i6">
+                <input type="text" class="propertyValue" name="i7"oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="propertyValue" name="i8">
+                <input type="text" class="propertyValue" name="i9">
+                <input type="text" class="propertyValue" name="i10">
+                <input type="text" class="propertyValue" name="i11">
+                <input type="text" class="propertyValue" name="i12"oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="propertyValue" name="i13"oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="propertyValue" name="i14"oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="propertyValue" name="i15"oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+            </div>
+            <input type="submit"class="propertyTitle" name="SUBMIT"></div>
+    </form>
+
+    </div>
+</body>
+
+</html>

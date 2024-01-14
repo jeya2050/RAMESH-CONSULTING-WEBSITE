@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh consulting</title>
+    <style>
+        .mybuttons {
+            /* display: flex; */
+            margin-left: -1350px;
+            background-color: rgb(226, 119, 43);
+            color: black;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 20px;
+            height:50px;
+            width:200px;
+            display: inline-block; 
+        }
+
+        .head {
+            margin-top: 25px;
+            font-size: 60px;
+            color: rgba(238, 52, 52, 0.867);
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:rgb(243, 233, 175);text-align:center;">
+    <div class="head"> RAMESH CONSULTING </div><br><br><br><br>
+    <div>
+        <form action="/DataAdd" method="post">
+            <input type="submit" value='ADD NEW DATA' class="mybuttons"autofocus >
+        </form>
+    </div>
+    <div>
+        <form action="/DataSearch" method="post">
+            <input type="submit" value='SEARCH DATA' class="mybuttons">
+        </form>
+    </div>
+
+    <div>
+        <form action="/Updatedata" method="post">
+            <input type="submit" value='UPDATE DATA' class="mybuttons">
+        </form>
+    </div>
+    <div>
+
+            <form action="{{ url_for('download_excel') }}" method="get">
+                <button type="submit" class="mybuttons">DOWNLOAD DATA</button>
+            </form>
+
+    </div>
+
+    <div style=" position: absolute; top: 5px; right: 5px; text-align: right; font-size: 20px ;font-weight: bold;">
+        <p id="current-date"></p>
+        <p id="current-time"></p>
+        <script>
+            function updateDateTime() {
+                var currentDate = new Date();
+                var dateElement = document.getElementById('current-date');
+                var timeElement = document.getElementById('current-time');
+
+                dateElement.innerHTML = 'Date: ' + currentDate.toLocaleDateString();
+                timeElement.innerHTML = 'Time: ' + currentDate.toLocaleTimeString();
+            }
+            // Update date and time every second
+            setInterval(updateDateTime, 1000);
+            // Initial update
+            updateDateTime();
+        </script>
+    </div>
+</body>
+
+</html>

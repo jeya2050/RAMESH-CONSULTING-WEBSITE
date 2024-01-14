@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh consulting</title>
+    <style>
+        .propertyTitle {
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            display: block;
+            text-transform: uppercase;
+            width: auto;
+            font-size: 20px;
+            margin: 19.5px;
+
+        }
+
+        .titleWrap1 {
+            /* display: inline-block; */
+            vertical-align: middle;
+            float: right;
+            padding-right: 50px;
+            padding-top: 10px;
+        }
+
+        .titleWrap {
+            display: inline-block;
+        }
+
+        .propertyValue {
+            font-family: verdana;
+            color: rgb(0, 0, 0);
+            display: block;
+            width: auto;
+            font-size: 20px;
+            margin: 12px;
+        }
+
+        .valueWrap {
+            display: inline-block;
+            width: auto;
+        }
+
+        .head {
+            margin-top: 25px;
+            font-size: 30px;
+            color: rgba(238, 52, 52, 0.867);
+            font-weight: bold;
+        }
+    </style>
+
+    <script></script>
+</head>
+
+<body style="background-color:rgb(243, 233, 175)">
+    <div class="head" style="text-align:center;"> RAMESH CONSULTING </div>
+    <div class="head" style="text-align:left; color:black; font-size: 24px"> CUSTOMER DETAILS : </div><br>
+    <div>
+        <form action="/Updatedata1"method="post">
+            <div class="titleWrap1">
+                <label class="propertyValue" for="fname">search by CUSTOMER ID :</label>
+                <input type="text" class="propertyValue" name="cus_id1">
+                <input type="submit" class="propertyValue" name="serch1" VALUE="SEARCH">
+            </div>
+        </form>
+    </div>
+    <div>
+        <form action="/save1" method="post">
+            <div class="titleWrap">
+                <label class="propertyTitle" for="fname">PURCHASE DATE :</label>
+                <label class="propertyTitle" for="fname">CUSTOMER ID :</label>
+                <label class="propertyTitle" for="fname">NAME :</label>
+                <label class="propertyTitle" for="fname">PHONE NUMBER :</label>
+                <label class="propertyTitle" for="fname">ADDRESS :</label>
+                <label class="propertyTitle" for="fname">AADHAR NUMBER :</label>
+                <label class="propertyTitle" for="fname">VEHICLE NUMBER :</label>
+                <label class="propertyTitle" for="fname">VEHICLE MODEL :</label>
+                <label class="propertyTitle" for="fname">VEHICLE YEAR :</label>
+                <label class="propertyTitle" for="fname">RC BOOK :</label>
+                <label class="propertyTitle" for="fname">NOC DETAILS:</label>
+                <label class="propertyTitle" for="fname">INSURENCE DETAILS :</label>
+                <label class="propertyTitle" for="fname">ADDITIONAL DETAILS :</label>
+                <label class="propertyTitle" for="fname">PURCHASE AMOUNT :</label>
+                <label class="propertyTitle" for="fname">COMMISSION AMOUNT :</label>
+                <label class="propertyTitle" for="fname">SPARE SPENT AMOUNT :</label>
+                <label class="propertyTitle" for="fname">TOTAL PURCHASE AMOUNT :</label>
+                <label class="propertyTitle" for="fname">SELLING DATE :</label>
+                <label class="propertyTitle" for="fname">BUYER NAME :</label>
+                <label class="propertyTitle" for="fname">BUYER PH.NUMBER :</label>
+                <label class="propertyTitle" for="fname">BUYER ADHAR NUMBER :</label>
+                <label class="propertyTitle" for="fname">BUYER ADDRESS :</label>
+                <label class="propertyTitle" for="fname">NOTES :</label>
+                <label class="propertyTitle" for="fname">AMOUNT TO BUYER :</label>
+                <label class="propertyTitle" for="fname">PROFIT :</label>
+
+            </div>
+            <div class="valueWrap">
+                <input type="date" class="propertyValue" name="i1"value="{{date1}}">
+                <input type="text" class="propertyValue" name="cus_id_label"value="{{cus_id}}">
+                <input type="text" class="propertyValue" name="i2" autofocus value="{{name}}">
+                <input type="text" class="propertyValue" name="i3"
+                    oninput="this.value=this.value.replace(/[^0-9,]/g,'');"value="{{ph_number}}">
+                <input type="text" class="propertyValue" name="i4"value="{{address}}">
+                <input type="text" maxlength="14" class="propertyValue" name="i5"
+                    oninput="this.value=this.value.replace(/[^0-9\s]/g,'');"value="{{aathar_number}}">
+                <input type="text" class="propertyValue" name="i16"value="{{vehicle_model}}">
+                <input type="text" class="propertyValue" name="i6"value="{{vehicle_year}}">
+                <input type="text" class="propertyValue" name="i7"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{rc_book}}">
+                <input type="text" class="propertyValue" name="i8"value="{{noc_Details}}">
+                <input type="text" class="propertyValue" name="i9"value="{{insurance_Details}}">
+                <input type="text" class="propertyValue" name="i10"value="{{notes}}">
+                <input type="text" class="propertyValue" name="i11"value="{{purchase_amt}}">
+                <input type="text" class="propertyValue" name="i12"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{commission_amt}}">
+                <input type="text" class="propertyValue" name="i13"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{sapre_spt_amt}}">
+                <input type="text" class="propertyValue" name="i14"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{total_purchase_amt}}">
+                <input type="text" class="propertyValue" name="i15"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{vehicle_num}}">
+                <input type="date" class="propertyValue" name="i17"value="{{sel_date}}">
+                <input type="text" class="propertyValue" name="i18"value="{{buy_name}}">
+                <input type="text" class="propertyValue" name="i19"
+                    oninput="this.value=this.value.replace(/[^0-9,]/g,'');"value="{{buy_num}}">
+                <input type="text" class="propertyValue" maxlength="14" name="i20"
+                    oninput="this.value=this.value.replace(/[^0-9\s]/g,'');"value="{{buy_adhaar}}">
+                <input type="text" class="propertyValue" name="i21"value="{{buy_add}}">
+                <input type="text" class="propertyValue" name="i22"value="{{buy_notes}}">
+                <input type="text" class="propertyValue" name="i23"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{amt2buyer}}">
+                <input type="text" class="propertyValue" name="i24"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'');"value="{{profit}}">
+            </div>
+            <input type="submit" class="propertyTitle" name="UPDATE" VALUE="UPDATE">
+    </div>
+    </form>
+
+    </div>
+</body>
+
+</html>
